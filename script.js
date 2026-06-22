@@ -8,9 +8,9 @@ const texts = [
 
 let current = 0;
 
-setInterval(() => {
+document.getElementById("typing").innerHTML = texts[0];
 
-document.getElementById("typing").innerHTML = texts[current];
+setInterval(() => {
 
 current++;
 
@@ -18,13 +18,55 @@ if(current >= texts.length){
 current = 0;
 }
 
-}, 2500);
+document.getElementById("typing").innerHTML = texts[current];
+
+},2500);
 
 
 /* CART */
 
-let cart = [];
-let quantities = {};
+function addToCart(id){
+
+const product =
+products.find(p => p.id === id);
+
+const qty =
+quantities[id];
+
+const existing =
+cart.find(item => item.id === id);
+
+if(existing){
+
+existing.qty += qty;
+
+}else{
+
+cart.push({
+...product,
+qty: qty
+});
+
+}
+
+quantities[id] = 1;
+
+const qtyElement =
+document.getElementById(`qty-${id}`);
+
+if(qtyElement){
+qtyElement.innerText = 1;
+}
+
+updateCart();
+
+alert(
+qty + " x " +
+product.name +
+" added to cart"
+);
+
+}
 
 
 /* RENDER PRODUCTS */
