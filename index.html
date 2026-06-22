@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Kalavishva Crafted With Soul</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
-<div id="lightbox">
 
-<span onclick="closeImage()">✖</span>
-
-<img id="lightboxImg">
-
-</div>
 <body>
 
 <nav class="navbar">
@@ -27,7 +24,9 @@
 
 <img src="logo.jpg" class="logo">
 
-<div class="brand-title">Kalavishva</div>
+<div class="brand-title">
+Kalavishva
+</div>
 
 <div class="brand-subtitle">
 Crafted With Soul
@@ -36,12 +35,21 @@ Crafted With Soul
 </div>
 
 </nav>
+
 <section class="hero-slider">
 
-<img id="bannerImage"
-src="banner1.jpg">
+<img id="bannerImage" src="banner1.jpg">
+
+<div class="banner-text">
+
+<h1>Kalavishva</h1>
+
+<p>Handmade Craft • Decor • Gift Items</p>
+
+</div>
 
 </section>
+
 <section class="hero">
 
 <h2 id="typing"></h2>
@@ -50,15 +58,37 @@ src="banner1.jpg">
 
 <div class="filters">
 
-<button onclick="filterProducts('all')">All</button>
-<button onclick="filterProducts('magnet')">Fridge Magnets</button>
-<button onclick="filterProducts('frame')">Frames</button>
-<button onclick="filterProducts('combo')">Combo Packs</button>
-<button onclick="filterProducts('decor')">Decor</button>
+<button onclick="filterProducts('all')">
+All
+</button>
+
+<button onclick="filterProducts('magnet')">
+Fridge Magnets
+</button>
+
+<button onclick="filterProducts('frame')">
+Frames
+</button>
+
+<button onclick="filterProducts('combo')">
+Combo Packs
+</button>
+
+<button onclick="filterProducts('decor')">
+Decor
+</button>
 
 </div>
 
 <div id="products"></div>
+
+<div id="lightbox">
+
+<span onclick="closeImage()">✖</span>
+
+<img id="lightboxImg">
+
+</div>
 
 <script src="script.js"></script>
 
