@@ -132,25 +132,6 @@ renderProducts(products);
 
 /* FILTER */
 
-function filterProducts(category){
-
-if(category==="all"){
-
-renderProducts(products);
-
-return;
-
-}
-
-renderProducts(
-
-products.filter(
-p=>p.category===category
-)
-
-);
-
-}
 
 
 /* QUANTITY */
@@ -328,3 +309,29 @@ document.getElementById(
 ).style.display = "none";
 
 }
+const banners = [
+
+"banner1.jpg",
+"banner2.jpg",
+"banner3.jpg",
+"banner4.jpg"
+
+];
+
+let bannerIndex = 0;
+
+setInterval(()=>{
+
+bannerIndex++;
+
+if(bannerIndex >= banners.length){
+
+bannerIndex = 0;
+
+}
+
+document.getElementById(
+"bannerImage"
+).src = banners[bannerIndex];
+
+},3000);
